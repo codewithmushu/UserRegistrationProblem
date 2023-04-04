@@ -22,6 +22,18 @@ namespace RegexProblem
             {
                 Console.WriteLine("Invalid mobile number entered.");
             }
+
+            Console.WriteLine("Please enter your password:");
+            string password = Console.ReadLine();
+
+            if (Regex.IsMatch(password, @"^.{8,}$"))
+            {
+                Console.WriteLine("Valid password entered.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid password entered.");
+            }
         }
     }
 }
