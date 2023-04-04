@@ -14,7 +14,14 @@ namespace RegexProblem
             Console.WriteLine("Please enter your first name:");
             string firstName = Console.ReadLine();
 
-           
+            if (Regex.IsMatch(firstName, @"^[A-Z][a-z]{2,}$"))
+            {
+                Console.WriteLine("Valid first name entered.");
+            }
+            else
+            {
+                Console.WriteLine("Invalid first name entered.");
+            }
         }
     }
 }
