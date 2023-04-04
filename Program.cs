@@ -36,8 +36,15 @@ namespace RegexProblem
                 Console.WriteLine("Invalid password entered.");
             }
 
+            string[] emails = { "abc.xyz@bl.co.in", "john.doe@gmail.com", "jane.doe@yahoo.com", "james.bond@mi6.gov.uk" };
 
-           
+            foreach (string email in emails)
+            {
+                string clearedEmail = Regex.Replace(email, @"[^\w\.@-]", "");
+                Console.WriteLine(clearedEmail);
+            }
+
+
         }
     }
 }
