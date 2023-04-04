@@ -11,16 +11,16 @@ namespace RegexProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter your email:");
-            string email = Console.ReadLine();
+            Console.WriteLine("Please enter your mobile number:");
+            string mobileNumber = Console.ReadLine();
 
-            if (Regex.IsMatch(email, @"^[a-zA-Z0-9]+([._+\-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.-][a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$"))
+            if (Regex.IsMatch(mobileNumber, @"^91\s[1-9][0-9]{9}$"))
             {
-                Console.WriteLine("Valid email entered.");
+                Console.WriteLine("Valid mobile number entered.");
             }
             else
             {
-                Console.WriteLine("Invalid email entered.");
+                Console.WriteLine("Invalid mobile number entered.");
             }
         }
     }
