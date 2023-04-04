@@ -11,16 +11,16 @@ namespace RegexProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter your first name:");
-            string firstName = Console.ReadLine();
+            Console.WriteLine("Please enter your last name:");
+            string lastName = Console.ReadLine();
 
-            if (Regex.IsMatch(firstName, @"^[A-Z][a-z]{2,}$"))
+            if (Regex.IsMatch(lastName, @"^[A-Z][a-z]{2,}$"))
             {
-                Console.WriteLine("Valid first name entered.");
+                Console.WriteLine("Valid last name entered.");
             }
             else
             {
-                Console.WriteLine("Invalid first name entered.");
+                Console.WriteLine("Invalid last name entered.");
             }
         }
     }
