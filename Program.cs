@@ -26,7 +26,8 @@ namespace RegexProblem
             Console.WriteLine("Please enter your password:");
             string password = Console.ReadLine();
 
-            if (Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*\d).{8,}$"))
+
+            if (Regex.IsMatch(password, @"^(?=.*[A-Z])(?=.*\d)(?=.*[^\w\s]).{8,}$"))
             {
                 Console.WriteLine("Valid password entered.");
             }
@@ -34,6 +35,9 @@ namespace RegexProblem
             {
                 Console.WriteLine("Invalid password entered.");
             }
+
+
+           
         }
     }
 }
